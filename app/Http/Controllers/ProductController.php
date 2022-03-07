@@ -27,20 +27,20 @@ class ProductController extends Controller
     {
         //
         $fields = $request->validate([
-            'name' => 'required|string',
-            'type' => 'required|integer',
+            'productName' => 'required|string',
+            'productType' => 'required|integer',
             'price' => 'required|integer',
         ]);
 
         $product = new Product;
-        $product->name = $fields['name'];
+        $product->name = $fields['productName'];
         $product->price = $fields['price'];
-        $product->type =  $fields['type'];
+        $product->type =  $fields['productType'];
         $result = $product->save();
 
         if($result){
             $result = [
-                'name' => 'show',
+                'productName' => 'show',
                 'payload' => $product->all(),
             ];
             return $result;
@@ -58,7 +58,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $result = [
-            'name' => 'show',
+            'productName' => 'show',
             'payload' => Product::find($id),
         ];
         return $result;
@@ -77,7 +77,7 @@ class ProductController extends Controller
         //
         $product = Product::find($id)->update($request->all());
         $result = [
-            'name' => 'update',
+            'productName' => 'update',
             'payload' => $product,
         ];
         return $result;
@@ -95,7 +95,7 @@ class ProductController extends Controller
         //
         $product =  Product::find($id)->delete();
         $result = [
-            'name' => 'destroy',
+            'productName' => 'destroy',
             'payload' => $product,
         ];
         return $result;
