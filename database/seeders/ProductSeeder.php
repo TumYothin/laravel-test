@@ -24,9 +24,9 @@ class ProductSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'Galaxy S20',
+                'productName' => 'Galaxy S20',
                 'price' => 1500,
-                'type' => 1,
+                'productType' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
