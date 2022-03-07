@@ -17,9 +17,9 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             [
-                'name' => 'iphone 11',
+                'productName' => 'iphone 11',
                 'price' => 1500,
-                'type' => 1,
+                'productType' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
@@ -31,9 +31,9 @@ class ProductSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'LG Smart TV',
+                'productName' => 'LG Smart TV',
                 'price' => 1500,
-                'type' => 100,
+                'productType' => 100,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]
