@@ -13,8 +13,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-
-        return Product::all();
+        $result = [
+            'productName' => 'show',
+            'payload' => Product::all(),
+        ];
+        return $result;
     }
 
     /**
